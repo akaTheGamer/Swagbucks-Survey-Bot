@@ -1,0 +1,25 @@
+{
+  "profile": {
+    "age": 34,
+    "gender": "female",
+    "income": "50000-75000",
+    "interests": ["technology", "travel"],
+    "country": "Germany",
+    "language": "German",
+    "owns_car": false
+  },
+  "login": {
+    "username": "qa_automation_user",
+    "password": "replace-with-test-password"
+  },
+  "automation": {
+    "min_delay_seconds": 0.5,
+    "max_delay_seconds": 3.0
+  },
+  "target": {
+    "base_url": "https://qa.example.com",
+    "mode": "authorized",
+    "allowed_domains": ["qa.example.com"],
+    "authorization_note": "Internal QA/staging survey environment approved for Playwright automation."
+  }
+}

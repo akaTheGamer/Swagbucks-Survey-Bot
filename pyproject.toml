@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surveybot"
+version = "0.1.0"
+description = "Local mock survey QA automation bot using async Playwright."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "playwright>=1.45",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+]
+
+[project.scripts]
+surveybot = "surveybot.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["surveybot*"]
+exclude = ["config*", "tests*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
